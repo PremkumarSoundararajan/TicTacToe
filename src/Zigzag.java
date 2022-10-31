@@ -5,7 +5,9 @@ public class Zigzag {
         int col = 0;
         int chars = 0;
         int row =-1;
-        char[][] formZigzag = new char[numRows][7];
+
+        int colIntitial = (s.length()/numRows) + (s.length() - ((s.length()/numRows)*3) + (numRows - 1));
+        char[][] formZigzag = new char[numRows][colIntitial];
         Boolean startFromTop = true;
         while (chars < s.length()){
             if (startFromTop == true){
@@ -42,7 +44,7 @@ public class Zigzag {
 
     public static void main(String[] args){
         Zigzag zigzag = new Zigzag();
-        System.out.println(zigzag.convertString("A", 1));
+        System.out.println(zigzag.convertString("PAYPALISHIRING", 4));
     }
 
 
