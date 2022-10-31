@@ -13,16 +13,12 @@ public class TicTacToe {
             for (int j = 0; j < input[i].length; j++){
 
                 valueByRows.add(input[i][j]);
+
                 valueByCols.add(input[j][i]);
 
-                if (i ==j){
-                    valueByDiag1.add(input[i][i]);
-                }
+                if (i ==j)  valueByDiag1.add(input[i][i]);
 
-                if (i +  j  == input.length - 1){
-                    valueByDiag2.add(input[i][j]);
-                }
-
+                if (i +  j  == input.length - 1) valueByDiag2.add(input[i][j]);
             }
             if (valueByRows.size() == 1) return valueByRows.iterator().next();
             valueByRows.clear();
