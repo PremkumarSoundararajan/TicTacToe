@@ -5,7 +5,7 @@ public class TryPermutation {
     Set<String> possiblePermutations(String input){
         if (input == null || input.length() == 0 || input.isBlank() || input.isEmpty())
             return new HashSet<>();
-        
+
         Set<String> response = new HashSet<>();
         for (int i = 0; i < input.length();i++){
             Character C = input.charAt(i);
